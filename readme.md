@@ -99,3 +99,10 @@ docker-compose up --build
 \`\`\`
 
 
+As it was not deployed yet in the cloud. I'll tell you my approach 
+
+1. AWS ECS (Elastic Container Service)
+2. AWS ElastiCache for Redis
+3. AWS DocumentDB
+4. AWS ALB (Application Load Balancer)
+5. AWS CloudWatch Logs
