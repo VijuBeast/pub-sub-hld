@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  listener-service:
+    build: .
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/listener
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    depends_on:
+      - mongo
+      - redis
+  mongo:
+    image: mongo
+    ports:
+      - "27018:27017"
+  redis:
+    image: redis
+    ports:
+      - "6380:6379"
